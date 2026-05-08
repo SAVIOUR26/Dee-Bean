@@ -16,9 +16,15 @@ $page = basename($_SERVER['PHP_SELF'], '.php');
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <title><?= isset($page_title) ? htmlspecialchars($page_title) . ' | ' . SITE_NAME : SITE_NAME . ' — ' . SITE_TAGLINE ?></title>
-  <!-- Favicon -->
+  <!-- Favicon & PWA -->
   <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
   <link rel="alternate icon" href="/assets/images/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/images/favicon.svg">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#1B3A2D">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Dee &amp; Bean">
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,6 +36,16 @@ $page = basename($_SERVER['PHP_SELF'], '.php');
   <?php if (isset($extra_css)) echo $extra_css; ?>
 </head>
 <body>
+
+<!-- Page Loader -->
+<div class="page-loader" id="pageLoader" aria-hidden="true" role="status">
+  <div class="loader-brand">
+    <div class="loader-cup">☕</div>
+    <div class="loader-logo">Dee <span>&amp;</span> Bean</div>
+    <div class="loader-sub">Brewed from the Heart</div>
+    <div class="loader-track"><div class="loader-fill"></div></div>
+  </div>
+</div>
 
 <!-- Grain overlay -->
 <div class="grain" aria-hidden="true"></div>
