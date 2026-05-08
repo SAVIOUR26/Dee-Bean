@@ -30,11 +30,11 @@
           <h5>Quick Links</h5>
           <div class="footer-links">
             <a href="/" class="footer-link"><i class="fa-solid fa-chevron-right"></i> Home</a>
-            <a href="/menu.php" class="footer-link"><i class="fa-solid fa-chevron-right"></i> Our Menu</a>
-            <a href="/about.php" class="footer-link"><i class="fa-solid fa-chevron-right"></i> About Us</a>
-            <a href="/story.php" class="footer-link"><i class="fa-solid fa-chevron-right"></i> Our Story</a>
-            <a href="/gallery.php" class="footer-link"><i class="fa-solid fa-chevron-right"></i> Gallery</a>
-            <a href="/contact.php" class="footer-link"><i class="fa-solid fa-chevron-right"></i> Contact</a>
+            <a href="/menu" class="footer-link"><i class="fa-solid fa-chevron-right"></i> Our Menu</a>
+            <a href="/about" class="footer-link"><i class="fa-solid fa-chevron-right"></i> About Us</a>
+            <a href="/story" class="footer-link"><i class="fa-solid fa-chevron-right"></i> Our Story</a>
+            <a href="/gallery" class="footer-link"><i class="fa-solid fa-chevron-right"></i> Gallery</a>
+            <a href="/contact" class="footer-link"><i class="fa-solid fa-chevron-right"></i> Contact</a>
           </div>
         </div>
 
@@ -103,8 +103,8 @@
       <div class="footer-bottom-inner">
         <span>&copy; <?= date('Y') ?> <?= SITE_NAME ?>. All rights reserved. Crafted with <i class="fa-solid fa-heart" style="color:var(--gold);"></i> for Uganda.</span>
         <div class="footer-bottom-links">
-          <a href="/privacy.php">Privacy</a>
-          <a href="/terms.php">Terms</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/terms">Terms</a>
           <a href="<?= wa_link() ?>" target="_blank">WhatsApp Us</a>
         </div>
       </div>

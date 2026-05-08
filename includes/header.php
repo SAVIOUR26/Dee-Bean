@@ -60,11 +60,11 @@ $page = basename($_SERVER['PHP_SELF'], '.php');
     <i class="fa-solid fa-xmark"></i>
   </button>
   <a href="/" class="mobile-nav-link <?= $page === 'index' ? 'active' : '' ?>">Home</a>
-  <a href="/menu.php" class="mobile-nav-link <?= $page === 'menu' ? 'active' : '' ?>">Our Menu</a>
-  <a href="/about.php" class="mobile-nav-link <?= $page === 'about' ? 'active' : '' ?>">About Us</a>
-  <a href="/story.php" class="mobile-nav-link <?= $page === 'story' ? 'active' : '' ?>">Our Story</a>
-  <a href="/gallery.php" class="mobile-nav-link <?= $page === 'gallery' ? 'active' : '' ?>">Gallery</a>
-  <a href="/contact.php" class="mobile-nav-link <?= $page === 'contact' ? 'active' : '' ?>">Contact</a>
+  <a href="/menu" class="mobile-nav-link <?= $page === 'menu' ? 'active' : '' ?>">Our Menu</a>
+  <a href="/about" class="mobile-nav-link <?= $page === 'about' ? 'active' : '' ?>">About Us</a>
+  <a href="/story" class="mobile-nav-link <?= $page === 'story' ? 'active' : '' ?>">Our Story</a>
+  <a href="/gallery" class="mobile-nav-link <?= $page === 'gallery' ? 'active' : '' ?>">Gallery</a>
+  <a href="/contact" class="mobile-nav-link <?= $page === 'contact' ? 'active' : '' ?>">Contact</a>
   <div class="mobile-nav-cta">
     <a href="<?= wa_link("Hi! I'd like to order from Dee & Bean Coffee.") ?>" target="_blank" class="btn btn-gold" style="width:100%;justify-content:center;">
       <i class="fa-brands fa-whatsapp"></i> Order via WhatsApp
@@ -106,20 +106,20 @@ $page = basename($_SERVER['PHP_SELF'], '.php');
         <nav class="nav-links" aria-label="Main navigation">
           <a href="/" class="nav-link <?= $page === 'index' ? 'active' : '' ?>">Home</a>
           <div class="nav-dropdown">
-            <a href="/menu.php" class="nav-link <?= $page === 'menu' ? 'active' : '' ?>">
+            <a href="/menu" class="nav-link <?= $page === 'menu' ? 'active' : '' ?>">
               Menu <i class="fa-solid fa-chevron-down" style="font-size:0.5rem;margin-left:3px;"></i>
             </a>
             <div class="nav-dropdown-panel">
-              <a href="/menu.php#hot-drinks">Hot Drinks</a>
-              <a href="/menu.php#cold-drinks">Cold Drinks</a>
-              <a href="/menu.php#food">Food & Pastries</a>
-              <a href="/menu.php#specialty">Ugandan Blends</a>
+              <a href="/menu#hot-drinks">Hot Drinks</a>
+              <a href="/menu#cold-drinks">Cold Drinks</a>
+              <a href="/menu#food">Food & Pastries</a>
+              <a href="/menu#specialty">Ugandan Blends</a>
             </div>
           </div>
-          <a href="/about.php" class="nav-link <?= $page === 'about' ? 'active' : '' ?>">About</a>
-          <a href="/story.php" class="nav-link <?= $page === 'story' ? 'active' : '' ?>">Our Story</a>
-          <a href="/gallery.php" class="nav-link <?= $page === 'gallery' ? 'active' : '' ?>">Gallery</a>
-          <a href="/contact.php" class="nav-link <?= $page === 'contact' ? 'active' : '' ?>">Contact</a>
+          <a href="/about" class="nav-link <?= $page === 'about' ? 'active' : '' ?>">About</a>
+          <a href="/story" class="nav-link <?= $page === 'story' ? 'active' : '' ?>">Our Story</a>
+          <a href="/gallery" class="nav-link <?= $page === 'gallery' ? 'active' : '' ?>">Gallery</a>
+          <a href="/contact" class="nav-link <?= $page === 'contact' ? 'active' : '' ?>">Contact</a>
         </nav>
 
         <!-- Right Controls -->
