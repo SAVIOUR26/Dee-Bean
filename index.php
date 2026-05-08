@@ -23,7 +23,7 @@ include 'includes/header.php';
     <span class="hp hp6">⭐</span>
   </div>
 
-  <div class="container">
+  <div class="container" style="position:relative;z-index:10;">
     <div class="hero-content">
 
       <div class="hero-badge reveal" style="transition-delay:0.1s;">

@@ -58,7 +58,7 @@ $SITE_IMAGES = [
 function img(string $key): string {
     global $SITE_IMAGES;
     $val = $SITE_IMAGES[$key] ?? '';
-    if (str_starts_with($val, '/')) return $val;
+    if ($val !== '' && $val[0] === '/') return $val;
     return DRIVE_IMG . $val . '=w1200';
 }
 

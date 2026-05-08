@@ -588,7 +588,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--forest-deep); li
   background: radial-gradient(ellipse at 70% 50%, rgba(201,146,42,0.12) 0%, transparent 65%);
   animation: heroGlow 6s ease-in-out infinite alternate;
   pointer-events: none;
-  z-index: 2;
+  z-index: 1;
 }
 @keyframes heroGlow {
   0%   { opacity: 0.4; transform: scale(1) translateX(0); }
@@ -599,7 +599,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--forest-deep); li
   position: absolute;
   inset: 0;
   pointer-events: none;
-  z-index: 3;
+  z-index: 1;
   overflow: hidden;
 }
 .hp {
@@ -1554,20 +1554,29 @@ textarea.form-control { resize: vertical; min-height: 130px; }
   opacity: 0;
   transform: translateY(36px);
   transition: opacity 0.75s var(--ease), transform 0.75s var(--ease);
+  animation: revealFallback 0.75s var(--ease) 1.5s forwards;
 }
-.reveal.in { opacity: 1; transform: none; }
+.reveal.in { opacity: 1; transform: none; animation: none; }
+@keyframes revealFallback {
+  to { opacity: 1; transform: none; }
+}
 .reveal-left {
   opacity: 0;
   transform: translateX(-36px);
   transition: opacity 0.75s var(--ease), transform 0.75s var(--ease);
+  animation: revealLeftFallback 0.75s var(--ease) 1.5s forwards;
 }
-.reveal-left.in { opacity: 1; transform: none; }
+.reveal-left.in { opacity: 1; transform: none; animation: none; }
+@keyframes revealLeftFallback {
+  to { opacity: 1; transform: none; }
+}
 .reveal-right {
   opacity: 0;
   transform: translateX(36px);
   transition: opacity 0.75s var(--ease), transform 0.75s var(--ease);
+  animation: revealRightFallback 0.75s var(--ease) 1.5s forwards;
 }
-.reveal-right.in { opacity: 1; transform: none; }
+.reveal-right.in { opacity: 1; transform: none; animation: none; }
 .stagger > * {
   opacity: 0;
   transform: translateY(28px);

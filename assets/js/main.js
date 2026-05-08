@@ -85,6 +85,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── Scroll Animations ──────────────────────────────────
   const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .stagger');
+  // Immediately show elements already in the viewport (above-fold hero content etc.)
+  reveals.forEach(el => {
+    const r = el.getBoundingClientRect();
+    if (r.top < window.innerHeight && r.bottom > 0) el.classList.add('in');
+  });
   if ('IntersectionObserver' in window && reveals.length) {
     const obs = new IntersectionObserver(entries => {
       entries.forEach(e => {
@@ -93,8 +98,8 @@ document.addEventListener('DOMContentLoaded', () => {
           obs.unobserve(e.target);
         }
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-    reveals.forEach(el => obs.observe(el));
+    }, { threshold: 0.08 });
+    reveals.forEach(el => { if (!el.classList.contains('in')) obs.observe(el); });
   }
 
   // ── Counter Animation ──────────────────────────────────
