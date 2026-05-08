@@ -84,19 +84,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── Scroll Animations ──────────────────────────────────
   const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .stagger');
+  // Progressive enhancement: hide elements only after JS confirms it's running
+  reveals.forEach(el => el.classList.add('will-animate'));
+
+  const revealEl = el => { el.classList.remove('will-animate'); el.classList.add('in'); };
   const revealInView = () => reveals.forEach(el => {
     const r = el.getBoundingClientRect();
-    if (r.top < window.innerHeight && r.bottom > 0) el.classList.add('in');
+    if (r.top < window.innerHeight && r.bottom > 0) revealEl(el);
   });
-  // Run after paint so layout is fully calculated
+  // Double rAF ensures layout is fully calculated before checking bounds
   requestAnimationFrame(() => requestAnimationFrame(revealInView));
   if ('IntersectionObserver' in window && reveals.length) {
     const obs = new IntersectionObserver(entries => {
       entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('in');
-          obs.unobserve(e.target);
-        }
+        if (e.isIntersecting) { revealEl(e.target); obs.unobserve(e.target); }
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
     reveals.forEach(el => obs.observe(el));
