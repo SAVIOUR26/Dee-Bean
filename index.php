@@ -10,20 +10,11 @@ include 'includes/header.php';
 ══════════════════════════════════════════ -->
 <section class="hero" aria-label="Welcome">
 
-  <!-- Background image — DeeBean(30) brand photo with parallax -->
+  <!-- Background image — DeeBean(30) with cinematic slow-zoom -->
   <div class="hero-bg-image" id="heroBg" style="background-image:url('<?= img('hero') ?>');" aria-hidden="true"></div>
   <div class="hero-texture" aria-hidden="true"></div>
-  <div class="hero-gradient-anim" aria-hidden="true"></div>
-  <div class="hero-particles" aria-hidden="true">
-    <span class="hp hp1">☕</span>
-    <span class="hp hp2">🌿</span>
-    <span class="hp hp3">✦</span>
-    <span class="hp hp4">☕</span>
-    <span class="hp hp5">🍃</span>
-    <span class="hp hp6">⭐</span>
-  </div>
 
-  <div class="container" style="position:relative;z-index:10;">
+  <div class="container">
     <div class="hero-content">
 
       <div class="hero-badge reveal" style="transition-delay:0.1s;">
