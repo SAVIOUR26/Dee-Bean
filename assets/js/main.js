@@ -22,6 +22,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (btt) btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
+  // ── Hero Parallax ──────────────────────────────────────
+  const heroBg = document.getElementById('heroBg');
+  if (heroBg) {
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      heroBg.style.transform = `scale(1.08) translateY(${y * 0.22}px)`;
+    }, { passive: true });
+  }
+
   // ── Mobile Nav ─────────────────────────────────────────
   window.openMobileNav = function() {
     document.getElementById('mobileNav').classList.add('open');

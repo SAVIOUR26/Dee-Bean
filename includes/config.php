@@ -10,8 +10,10 @@ define('SITE_URL',     'https://deeandbeancoffee.com');
 define('SITE_EMAIL',   'deebeancoffee@gmail.com');
 define('PHONE_1',      '+256-774-792-810');
 define('PHONE_2',      '+256-703-803-616');
-define('ADDRESS',      'Shell Select Ntinda, Kigobe Road, opposite NCHE, Kampala, Uganda');
-define('ADDRESS_SHORT','Ntinda, Kigobe Road, Kampala');
+define('ADDRESS',        'Shell Select, Kigobe Road, Opp NCHE, Ntinda, Kampala, Uganda');
+define('ADDRESS_SHORT',  'Ntinda, Kigobe Road, Kampala');
+define('ADDRESS_2',      'Shell Select Bukoto, after Oryx, Opp Kirabo Complex, Kampala');
+define('ADDRESS_SHORT_2','Bukoto, Kampala');
 define('WHATSAPP',     '+256774792810');
 define('INSTAGRAM',    'https://instagram.com/deebeancoffee');
 define('TIKTOK',       'https://tiktok.com/@deebeancoffee');
@@ -25,11 +27,12 @@ define('VISION',       'A world where every sip supports sustainable livelihoods
 // Google Drive Image Base URL — real photos from the folder
 define('DRIVE_IMG', 'https://lh3.googleusercontent.com/d/');
 
-// Real image IDs from Drive (DeeBean photos)
+// Image map: Google Drive IDs or local paths (local paths start with '/')
 $SITE_IMAGES = [
-    'hero'      => '1ng_41SF9XhVLrGa6Gpdo7qcYKqKGFsh0', // DeeBean(22)
+    'hero'      => '/assets/images/hero-db30.jpg',       // DeeBean(30) — hero
     'hero2'     => '1iXOWQ5k1ULkZSAW3EdKrMo-sz0cpqKT_', // DeeBean(21)
-    'about'     => '1syqBYaTdSuiCrh6Gly5fCFJ9nRXv_36g', // DeeBean(20)
+    'about'     => '/assets/images/product1.jpg',         // product(1) — story/about
+    'product1'  => '/assets/images/product1.jpg',         // product(1)
     'about2'    => '1wj29aRw063W3AerTZBuWJx9XaC0zKd7N', // DeeBean(9)
     'brand'     => '1l_IfjhXuyAi8u278P6QaTVvjpGF-1K0e', // DeeBean(30) - signage/logo
     'cafe'      => '1B3zcbE9t8gk7NHuuiJveYNHl3SY7SH7x', // DeeBean(31)
@@ -54,7 +57,9 @@ $SITE_IMAGES = [
 
 function img(string $key): string {
     global $SITE_IMAGES;
-    return DRIVE_IMG . ($SITE_IMAGES[$key] ?? '') . '=w1200';
+    $val = $SITE_IMAGES[$key] ?? '';
+    if (str_starts_with($val, '/')) return $val;
+    return DRIVE_IMG . $val . '=w1200';
 }
 
 function wa_link(string $msg = ''): string {

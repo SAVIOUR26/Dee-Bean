@@ -37,7 +37,7 @@ include 'includes/header.php';
         <p>What started as a humble experiment in homegrown beans blossomed into a deeper calling: to bring the taste of authentic Ugandan coffee to the world, while empowering the hands that grow it.</p>
         <p><strong>Dee &amp; Bean Coffee is more than just a brand; it is a journey from soil to soul.</strong> We work directly with smallholder farmers — mostly women — to grow and harvest beans that are rich, bold, and full of story. Every bean is nurtured with care, every roast perfected with purpose, and every sip meant to awaken not just your senses, but your spirit.</p>
         <div style="margin-top:32px;display:flex;gap:14px;flex-wrap:wrap;">
-          <a href="/story.php" class="btn btn-primary"><i class="fa-solid fa-users"></i> Meet the Team</a>
+          <a href="/story" class="btn btn-primary"><i class="fa-solid fa-users"></i> Meet the Team</a>
           <a href="<?= wa_link() ?>" target="_blank" class="btn btn-outline"><i class="fa-brands fa-whatsapp"></i> Get in Touch</a>
         </div>
       </div>
@@ -170,7 +170,7 @@ include 'includes/header.php';
       <h2 class="headline light" style="margin-bottom:18px;">Let's Brew <em>Together</em></h2>
       <p class="subhead light" style="margin:0 auto 40px;">Wholesale partnerships, collaborations, workshops, or just a conversation — we're always open to building connections over coffee.</p>
       <div class="cta-actions">
-        <a href="/contact.php" class="btn btn-gold"><i class="fa-solid fa-envelope"></i> Get in Touch</a>
+        <a href="/contact" class="btn btn-gold"><i class="fa-solid fa-envelope"></i> Get in Touch</a>
         <a href="<?= wa_link("Hi! I'm interested in partnering with Dee & Bean Coffee.") ?>" target="_blank" class="btn btn-outline-light"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a>
       </div>
     </div>

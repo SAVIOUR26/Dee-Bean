@@ -10,9 +10,18 @@ include 'includes/header.php';
 ══════════════════════════════════════════ -->
 <section class="hero" aria-label="Welcome">
 
-  <!-- Background image — real photo from the brand -->
-  <div class="hero-bg-image" style="background-image:url('<?= img('hero') ?>');" aria-hidden="true"></div>
+  <!-- Background image — DeeBean(30) brand photo with parallax -->
+  <div class="hero-bg-image" id="heroBg" style="background-image:url('<?= img('hero') ?>');" aria-hidden="true"></div>
   <div class="hero-texture" aria-hidden="true"></div>
+  <div class="hero-gradient-anim" aria-hidden="true"></div>
+  <div class="hero-particles" aria-hidden="true">
+    <span class="hp hp1">☕</span>
+    <span class="hp hp2">🌿</span>
+    <span class="hp hp3">✦</span>
+    <span class="hp hp4">☕</span>
+    <span class="hp hp5">🍃</span>
+    <span class="hp hp6">⭐</span>
+  </div>
 
   <div class="container">
     <div class="hero-content">
@@ -38,10 +47,10 @@ include 'includes/header.php';
       </p>
 
       <div class="hero-actions reveal" style="margin-top:36px;transition-delay:0.45s;">
-        <a href="/menu.php" class="btn btn-gold">
+        <a href="/menu" class="btn btn-gold">
           <i class="fa-solid fa-mug-hot"></i> Explore Menu
         </a>
-        <a href="/story.php" class="btn btn-outline-light">
+        <a href="/story" class="btn btn-outline-light">
           <i class="fa-solid fa-seedling"></i> Our Story
         </a>
         <a href="<?= wa_link("Hi! I'd like to order from Dee & Bean Coffee.") ?>" target="_blank" class="btn btn-outline-light">
@@ -179,10 +188,10 @@ include 'includes/header.php';
         </div>
 
         <div style="margin-top:36px;display:flex;gap:14px;flex-wrap:wrap;">
-          <a href="/about.php" class="btn btn-primary">
+          <a href="/about" class="btn btn-primary">
             <i class="fa-solid fa-arrow-right"></i> Read Full Story
           </a>
-          <a href="/story.php" class="btn btn-outline">
+          <a href="/story" class="btn btn-outline">
             <i class="fa-solid fa-users"></i> Meet the Team
           </a>
         </div>
@@ -349,7 +358,7 @@ include 'includes/header.php';
     <?php endforeach; ?>
 
     <div class="text-center reveal" style="margin-top:52px;">
-      <a href="/menu.php" class="btn btn-primary">
+      <a href="/menu" class="btn btn-primary">
         <i class="fa-solid fa-list"></i> View Full Menu
       </a>
     </div>
@@ -379,10 +388,10 @@ include 'includes/header.php';
           of quality, sustainability, and community empowerment.
         </p>
         <div style="margin-top:36px;display:flex;gap:14px;flex-wrap:wrap;">
-          <a href="/story.php" class="btn btn-gold">
+          <a href="/story" class="btn btn-gold">
             <i class="fa-solid fa-leaf"></i> Explore Our Impact
           </a>
-          <a href="/contact.php" class="btn btn-outline-light">
+          <a href="/contact" class="btn btn-outline-light">
             <i class="fa-solid fa-handshake"></i> Partner With Us
           </a>
         </div>
@@ -556,7 +565,7 @@ include 'includes/header.php';
     </div>
 
     <div class="text-center" style="margin-top:40px;">
-      <a href="/gallery.php" class="btn btn-outline">
+      <a href="/gallery" class="btn btn-outline">
         <i class="fa-regular fa-images"></i> View Full Gallery
       </a>
     </div>
@@ -626,17 +635,18 @@ include 'includes/header.php';
         Your Perfect Cup <em>Awaits</em>
       </h2>
       <p class="subhead light" style="max-width:560px;margin:0 auto;">
-        Find us at Shell Select, Ntinda Kigobe Road — opposite NCHE, Kampala. 
+        Two locations in Kampala — Shell Select Kigobe Road (Opp NCHE, Ntinda) &amp;
+        Shell Select Bukoto (after Oryx, Opp Kirabo Complex).
         Walk in, order on Glovo, or message us on WhatsApp.
       </p>
       <div class="cta-actions">
         <a href="<?= wa_link("Hi! I'd like to order from Dee & Bean Coffee.") ?>" target="_blank" class="btn btn-gold">
           <i class="fa-brands fa-whatsapp"></i> Order via WhatsApp
         </a>
-        <a href="/contact.php" class="btn btn-outline-light">
+        <a href="/contact" class="btn btn-outline-light">
           <i class="fa-solid fa-location-dot"></i> Find Us
         </a>
-        <a href="/menu.php" class="btn btn-outline-light">
+        <a href="/menu" class="btn btn-outline-light">
           <i class="fa-solid fa-mug-hot"></i> Full Menu
         </a>
       </div>
@@ -656,18 +666,34 @@ include 'includes/header.php';
 </div>
 
 <!-- ══════════════════════════════════════════
-     LOCATION
+     LOCATIONS
 ══════════════════════════════════════════ -->
 <div class="location-grid">
   <div class="location-info reveal-left">
     <div class="eyebrow no-lines" style="color:var(--gold);">Find Us</div>
-    <h3 class="headline light" style="font-size:1.8rem;margin-bottom:18px;">
-      Visit <em>Our Café</em>
+    <h3 class="headline light" style="font-size:1.8rem;margin-bottom:24px;">
+      Visit <em>Our Cafés</em>
     </h3>
-    <p style="font-family:var(--font-accent);font-style:italic;color:rgba(247,240,227,0.65);line-height:1.7;margin-bottom:28px;font-size:0.95rem;">
-      <?= ADDRESS ?>
-    </p>
-    <div class="hours-list">
+
+    <!-- Location 1 -->
+    <div class="location-branch">
+      <div class="location-branch-num">01</div>
+      <div>
+        <h5 style="color:var(--gold-light);font-family:var(--font-display);font-size:0.95rem;margin-bottom:4px;">Kigobe Road, Ntinda</h5>
+        <p style="font-family:var(--font-accent);font-style:italic;color:rgba(247,240,227,0.65);line-height:1.6;font-size:0.88rem;"><?= ADDRESS ?></p>
+      </div>
+    </div>
+
+    <!-- Location 2 -->
+    <div class="location-branch" style="margin-top:18px;">
+      <div class="location-branch-num">02</div>
+      <div>
+        <h5 style="color:var(--gold-light);font-family:var(--font-display);font-size:0.95rem;margin-bottom:4px;">Bukoto</h5>
+        <p style="font-family:var(--font-accent);font-style:italic;color:rgba(247,240,227,0.65);line-height:1.6;font-size:0.88rem;"><?= ADDRESS_2 ?></p>
+      </div>
+    </div>
+
+    <div class="hours-list" style="margin-top:28px;">
       <?php
       $hours = [
         ['Mon – Fri',     '7:00am – 9:00pm',  false],
@@ -687,17 +713,17 @@ include 'includes/header.php';
     </div>
     <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap;">
       <a href="https://maps.google.com/?q=Shell+Select+Ntinda+Kigobe+Road+Kampala" target="_blank" class="btn btn-gold" style="padding:12px 22px;font-size:0.68rem;">
-        <i class="fa-solid fa-map-location-dot"></i> Get Directions
+        <i class="fa-solid fa-map-location-dot"></i> Ntinda Directions
       </a>
-      <a href="<?= wa_link() ?>" target="_blank" class="btn btn-outline-light" style="padding:12px 22px;font-size:0.68rem;">
-        <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+      <a href="https://maps.google.com/?q=Shell+Select+Bukoto+Kampala" target="_blank" class="btn btn-outline-light" style="padding:12px 22px;font-size:0.68rem;">
+        <i class="fa-solid fa-map-location-dot"></i> Bukoto Directions
       </a>
     </div>
   </div>
   <div class="location-map-wrap">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7460!2d32.6152!3d0.3486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbb0%3A0x0!2sShell+Select+Ntinda+Kigobe+Road+Kampala!5e0!3m2!1sen!2sug!4v1"
-      title="Dee and Bean Coffee Location — Ntinda, Kampala"
+      title="Dee and Bean Coffee — Ntinda Location"
       allowfullscreen
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade">

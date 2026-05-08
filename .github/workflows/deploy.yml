@@ -31,6 +31,7 @@ jobs:
             .env
             .env.*
             data/subscribers.txt
+            DEEBEAN/**
 
       - name: Deployment complete
         run: echo "✅ Dee & Bean Coffee deployed successfully to deeandbeancoffee.com"

@@ -7,7 +7,7 @@ include 'includes/header.php';
 <div class="page-header">
   <div class="page-header-content">
     <div class="container">
-      <nav class="breadcrumb"><a href="/">Home</a> <i class="fa-solid fa-chevron-right"></i> <a href="/about.php">About</a> <i class="fa-solid fa-chevron-right"></i> <span>Our Story</span></nav>
+      <nav class="breadcrumb"><a href="/">Home</a> <i class="fa-solid fa-chevron-right"></i> <a href="/about">About</a> <i class="fa-solid fa-chevron-right"></i> <span>Our Story</span></nav>
       <h1 class="headline light">The <em style="color:var(--gold-light);">Dee & Bean</em> Story</h1>
     </div>
   </div>
@@ -20,7 +20,9 @@ include 'includes/header.php';
       <p style="font-family:var(--font-body);font-size:0.72rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-top:8px;">Proprietor & Founder</p>
     </div>
     <div class="reveal" style="text-align:center;margin-bottom:48px;">
-      <div style="width:160px;height:160px;border-radius:50%;background:linear-gradient(135deg,var(--forest),var(--forest-mid));margin:0 auto;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:3.5rem;font-weight:700;color:var(--gold-light);border:4px solid var(--gold);">DA</div>
+      <div style="width:220px;height:220px;border-radius:50%;margin:0 auto;overflow:hidden;border:4px solid var(--gold);box-shadow:0 12px 48px rgba(201,146,42,0.25);">
+        <img src="<?= img('product1') ?>" alt="Dee & Bean Coffee — Our Product" style="width:100%;height:100%;object-fit:cover;">
+      </div>
     </div>
     <div class="reveal">
       <blockquote style="font-family:var(--font-display);font-size:clamp(1.3rem,3vw,1.8rem);font-style:italic;color:var(--forest-deep);border-left:4px solid var(--gold);padding:20px 32px;margin-bottom:40px;line-height:1.45;">
@@ -50,8 +52,8 @@ include 'includes/header.php';
       <h2 class="headline light" style="margin-bottom:18px;">Your Cup <em>Changes Lives</em></h2>
       <p class="subhead light" style="margin:0 auto 32px;">Every sip at Dee &amp; Bean directly supports women farmers, young apprentices, and highland communities across Uganda.</p>
       <div class="cta-actions">
-        <a href="/menu.php" class="btn btn-gold"><i class="fa-solid fa-mug-hot"></i> Order Your Cup</a>
-        <a href="/contact.php" class="btn btn-outline-light"><i class="fa-solid fa-envelope"></i> Get Involved</a>
+        <a href="/menu" class="btn btn-gold"><i class="fa-solid fa-mug-hot"></i> Order Your Cup</a>
+        <a href="/contact" class="btn btn-outline-light"><i class="fa-solid fa-envelope"></i> Get Involved</a>
       </div>
     </div>
   </div>
