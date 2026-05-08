@@ -3,6 +3,12 @@
    ============================================================ */
 'use strict';
 
+// ── Page Loader ────────────────────────────────────────────
+window.addEventListener('load', () => {
+  const loader = document.getElementById('pageLoader');
+  if (loader) setTimeout(() => loader.classList.add('done'), 400);
+});
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // ── Navbar scroll ──────────────────────────────────────
@@ -10,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const btt = document.getElementById('backToTop');
   function onScroll() {
     const y = window.scrollY;
-    if (y > 80) navbar.classList.add('scrolled');
+    if (y > 40) navbar.classList.add('scrolled');
     else navbar.classList.remove('scrolled');
     if (btt) {
       if (y > 400) btt.classList.add('visible');
@@ -54,7 +60,12 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.menu-panel').forEach(p => p.classList.remove('active'));
       tab.classList.add('active');
       const panel = document.getElementById(target);
-      if (panel) panel.classList.add('active');
+      if (panel) {
+        panel.classList.add('active');
+        // Ensure stagger children are always visible when a tab is clicked
+        panel.classList.remove('will-animate');
+        panel.classList.add('in');
+      }
     });
   });
   if (menuTabs.length) menuTabs[0].click();
@@ -185,13 +196,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ── Hero parallax ─────────────────────────────────────
-  const heroBg = document.querySelector('.hero-bg-image');
-  if (heroBg) {
-    window.addEventListener('scroll', () => {
-      const y = window.scrollY;
-      heroBg.style.transform = `translateY(${y * 0.3}px)`;
-    }, { passive: true });
-  }
-
 });
+
+// ── Service Worker (PWA) ───────────────────────────────
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(() => {});
+  });
+}

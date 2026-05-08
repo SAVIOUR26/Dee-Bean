@@ -14,6 +14,20 @@ include 'includes/header.php';
   <div class="hero-bg-image" id="heroBg" style="background-image:url('<?= img('hero') ?>');" aria-hidden="true"></div>
   <div class="hero-texture" aria-hidden="true"></div>
 
+  <!-- Floating live emojis -->
+  <div class="hero-floats" aria-hidden="true">
+    <span class="hero-float" style="--x:8%;  --d:0s;   --dur:11s; --s:1.3rem; --r0:-6deg;  --r1:14deg;">☕</span>
+    <span class="hero-float" style="--x:22%; --d:2.4s; --dur:9s;  --s:1.1rem; --r0:5deg;   --r1:-12deg;">🌿</span>
+    <span class="hero-float" style="--x:38%; --d:1s;   --dur:13s; --s:1.5rem; --r0:-10deg; --r1:8deg;">⭐</span>
+    <span class="hero-float" style="--x:55%; --d:3.5s; --dur:10s; --s:1.2rem; --r0:8deg;   --r1:-15deg;">🍃</span>
+    <span class="hero-float" style="--x:70%; --d:0.6s; --dur:12s; --s:1.4rem; --r0:-4deg;  --r1:10deg;">☕</span>
+    <span class="hero-float" style="--x:83%; --d:2s;   --dur:8.5s;--s:1.0rem; --r0:12deg;  --r1:-8deg;">🌿</span>
+    <span class="hero-float" style="--x:15%; --d:4.5s; --dur:14s; --s:1.2rem; --r0:-8deg;  --r1:6deg;">✨</span>
+    <span class="hero-float" style="--x:93%; --d:1.8s; --dur:9.5s;--s:1.1rem; --r0:6deg;   --r1:-10deg;">🫙</span>
+    <span class="hero-float" style="--x:48%; --d:5s;   --dur:11s; --s:1.3rem; --r0:-12deg; --r1:9deg;">👩🏾‍🌾</span>
+    <span class="hero-float" style="--x:65%; --d:3s;   --dur:15s; --s:1.0rem; --r0:4deg;   --r1:-11deg;">🔥</span>
+  </div>
+
   <div class="container">
     <div class="hero-content">
 
