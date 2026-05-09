@@ -29,7 +29,7 @@ define('DRIVE_IMG', 'https://lh3.googleusercontent.com/d/');
 
 // Image map: Google Drive IDs or local paths (local paths start with '/')
 $SITE_IMAGES = [
-    'hero'      => '/assets/images/hero-db30.jpg',       // DeeBean(30) — hero
+    'hero'      => '/assets/images/hero-bukoto.jpg',      // Branch - Shell Bukoto — hero
     'hero2'     => '1iXOWQ5k1ULkZSAW3EdKrMo-sz0cpqKT_', // DeeBean(21)
     'about'     => '/assets/images/product1.jpg',         // product(1) — story/about
     'product1'  => '/assets/images/product1.jpg',         // product(1)

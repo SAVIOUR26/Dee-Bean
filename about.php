@@ -136,7 +136,7 @@ include 'includes/header.php';
         We collaborate with like-minded organizations who share our values of quality, sustainability, and community.
       </p>
     </div>
-    <div class="pillars-grid stagger" style="grid-template-columns:repeat(2,1fr);">
+    <div class="pillars-grid stagger" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
       <div class="pillar" style="background:var(--ivory);border:1px solid var(--border);">
         <div class="pillar-icon" style="background:var(--parchment);color:var(--forest);border-color:var(--border);"><i class="fa-solid fa-award"></i></div>
         <h4 style="color:var(--forest-deep);">Uganda Coffee Development Authority</h4>
@@ -148,7 +148,7 @@ include 'includes/header.php';
         <p style="color:rgba(42,42,42,0.6);">Certification, advocacy, and global standards ensuring our farmers receive fair compensation.</p>
       </div>
       <div class="pillar" style="background:var(--ivory);border:1px solid var(--border);">
-        <div class="pillar-icon" style="background:var(--parchment);color:var(--forest);border-color:var(--border);"><i class="fa-solid fa-gorilla fa-brands"></i><i class="fa-solid fa-mug-hot"></i></div>
+        <div class="pillar-icon" style="background:var(--parchment);color:var(--forest);border-color:var(--border);"><i class="fa-solid fa-mug-hot"></i></div>
         <h4 style="color:var(--forest-deep);">Gorilla Highlands Coffee</h4>
         <p style="color:rgba(42,42,42,0.6);">Award-winning partner from Southwestern Uganda. Ethical farming and environmental stewardship at its finest.</p>
       </div>
@@ -156,6 +156,21 @@ include 'includes/header.php';
         <div class="pillar-icon" style="background:var(--parchment);color:var(--forest);border-color:var(--border);"><i class="fa-solid fa-seedling"></i></div>
         <h4 style="color:var(--forest-deep);">Sera Wild Coffee</h4>
         <p style="color:rgba(42,42,42,0.6);">Wild-harvested Ugandan coffee with exceptional biodiversity and commitment to forest preservation.</p>
+      </div>
+      <div class="pillar" style="background:var(--ivory);border:1px solid var(--border);">
+        <div class="pillar-icon" style="background:var(--parchment);color:var(--forest);border-color:var(--border);"><i class="fa-solid fa-handshake"></i></div>
+        <h4 style="color:var(--forest-deep);">CURAD</h4>
+        <p style="color:rgba(42,42,42,0.6);">Supporting enterprise development and private sector growth across Uganda's agri-business landscape.</p>
+      </div>
+      <div class="pillar" style="background:var(--ivory);border:1px solid var(--border);">
+        <div class="pillar-icon" style="background:var(--parchment);color:var(--forest);border-color:var(--border);"><i class="fa-solid fa-mug-saucer"></i></div>
+        <h4 style="color:var(--forest-deep);">KIMCO Coffee</h4>
+        <p style="color:rgba(42,42,42,0.6);">A trusted coffee partner sharing our commitment to quality Ugandan beans and community-centred trade.</p>
+      </div>
+      <div class="pillar" style="background:var(--ivory);border:1px solid var(--border);">
+        <div class="pillar-icon" style="background:var(--parchment);color:var(--forest);border-color:var(--border);"><i class="fa-solid fa-leaf"></i></div>
+        <h4 style="color:var(--forest-deep);">Hinga Coffee</h4>
+        <p style="color:rgba(42,42,42,0.6);">Dedicated to sustainable farming and exceptional Ugandan specialty coffee from highland cooperatives.</p>
       </div>
     </div>
   </div>
