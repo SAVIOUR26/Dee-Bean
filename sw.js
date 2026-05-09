@@ -1,10 +1,10 @@
 /* Dee & Bean Coffee — Service Worker */
-const CACHE = 'deebean-v1';
+const CACHE = 'deebean-v2';
 const ASSETS = [
   '/',
   '/assets/css/style.css',
   '/assets/js/main.js',
-  '/assets/images/hero-db30.jpg',
+  '/assets/images/hero-bukoto.jpg',
   '/assets/images/product1.jpg',
   '/manifest.json'
 ];
