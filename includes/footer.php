@@ -43,20 +43,8 @@
           <h5>Opening Hours</h5>
           <div class="footer-hours">
             <div class="footer-hour">
-              <span class="d">Mon – Fri</span>
-              <span class="t">7:00am – 9:00pm</span>
-            </div>
-            <div class="footer-hour">
-              <span class="d">Saturday</span>
-              <span class="t">8:00am – 10:00pm</span>
-            </div>
-            <div class="footer-hour">
-              <span class="d">Sunday</span>
-              <span class="t">9:00am – 8:00pm</span>
-            </div>
-            <div class="footer-hour" style="margin-top:10px;padding-top:10px;border-top:1px solid rgba(201,146,42,0.12);">
-              <span class="d">Public Holidays</span>
-              <span class="t" style="color:var(--gold);">10:00am – 6:00pm</span>
+              <span class="d">Daily</span>
+              <span class="t" style="color:var(--gold);">7:00am – 11:00pm</span>
             </div>
           </div>
           <div style="margin-top:20px;">

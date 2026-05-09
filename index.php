@@ -388,8 +388,11 @@ include 'includes/header.php';
           organic beans and reinvesting 10% of profits into local education and health programs.
         </p>
         <p class="story-body">
-          We are proud partners with <strong style="color:var(--gold-light);">Gorilla Highlands Coffee</strong> and 
-          <strong style="color:var(--gold-light);">Sera Wild Coffee</strong> — organizations that share our values 
+          We are proud partners with <strong style="color:var(--gold-light);">Gorilla Highlands Coffee</strong>,
+          <strong style="color:var(--gold-light);">Sera Wild Coffee</strong>,
+          <strong style="color:var(--gold-light);">CURAD</strong>,
+          <strong style="color:var(--gold-light);">KIMCO Coffee</strong>, and
+          <strong style="color:var(--gold-light);">Hinga Coffee</strong> — organizations that share our values
           of quality, sustainability, and community empowerment.
         </p>
         <div style="margin-top:36px;display:flex;gap:14px;flex-wrap:wrap;">
@@ -699,22 +702,10 @@ include 'includes/header.php';
     </div>
 
     <div class="hours-list" style="margin-top:28px;">
-      <?php
-      $hours = [
-        ['Mon – Fri',     '7:00am – 9:00pm',  false],
-        ['Saturday',      '8:00am – 10:00pm', false],
-        ['Sunday',        '9:00am – 8:00pm',  false],
-        ['Public Holiday','10:00am – 6:00pm', false],
-      ];
-      $dow = (int) date('N');
-      foreach ($hours as $i => $h):
-        $today = ($dow >= 1 && $dow <= 5 && $i === 0) || ($dow === 6 && $i === 1) || ($dow === 7 && $i === 2);
-      ?>
-      <div class="hours-row <?= $today ? 'today' : '' ?>">
-        <span class="day"><?= $h[0] ?> <?= $today ? '<i class="fa-solid fa-circle" style="color:var(--gold);font-size:0.4rem;vertical-align:middle;"></i>' : '' ?></span>
-        <span class="time"><?= $h[1] ?></span>
+      <div class="hours-row today">
+        <span class="day">Daily <i class="fa-solid fa-circle" style="color:var(--gold);font-size:0.4rem;vertical-align:middle;"></i></span>
+        <span class="time">7:00am – 11:00pm</span>
       </div>
-      <?php endforeach; ?>
     </div>
     <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap;">
       <a href="https://maps.google.com/?q=Shell+Select+Ntinda+Kigobe+Road+Kampala" target="_blank" class="btn btn-gold" style="padding:12px 22px;font-size:0.68rem;">
