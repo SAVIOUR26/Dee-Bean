@@ -241,98 +241,67 @@ include 'includes/header.php';
     <div class="text-center reveal" style="margin-bottom:56px;">
       <div class="eyebrow" style="justify-content:center;">What We Brew</div>
       <h2 class="headline" style="margin-bottom:16px;">
-        Our <em>Signature</em> Selections
+        A Taste of Our <em>Menu</em>
       </h2>
       <p class="subhead" style="max-width:560px;margin:0 auto;">
-        From bold Ugandan espresso to delicate highland pour-overs — every cup is a story from the soil.
+        From bold Ugandan espresso to tropical smoothies and our famous Signatures — every cup is freshly prepared, every day.
       </p>
     </div>
 
     <!-- Category Tabs -->
     <div class="menu-categories">
       <button class="menu-cat-btn" data-panel="panel-hot">
-        <i class="fa-solid fa-mug-hot"></i> Hot Drinks
+        <i class="fa-solid fa-mug-hot"></i> Coffee Classics
+      </button>
+      <button class="menu-cat-btn" data-panel="panel-tea">
+        <i class="fa-solid fa-mug-saucer"></i> Tea &amp; Choc
       </button>
       <button class="menu-cat-btn" data-panel="panel-cold">
-        <i class="fa-solid fa-glass-water"></i> Cold Drinks
+        <i class="fa-solid fa-blender"></i> Cold Drinks
       </button>
-      <button class="menu-cat-btn" data-panel="panel-food">
-        <i class="fa-solid fa-bread-slice"></i> Food &amp; Pastries
-      </button>
-      <button class="menu-cat-btn" data-panel="panel-blends">
-        <i class="fa-solid fa-seedling"></i> Ugandan Blends
+      <button class="menu-cat-btn" data-panel="panel-signatures">
+        <i class="fa-solid fa-star"></i> Signatures
       </button>
     </div>
 
     <?php
     $hot = [
-      ['cat'=>'Espresso','name'=>'Classic Espresso','desc'=>'Rich, concentrated shot of our signature dark roast with velvety crema. Pure Ugandan boldness.','price'=>'5,000','badge'=>'Best Seller','img'=>'brand'],
-      ['cat'=>'Latte','name'=>'Signature Latte','desc'=>'Smooth espresso kissed with perfectly steamed milk and your choice of our house syrups.','price'=>'8,000','badge'=>null,'img'=>'about2'],
-      ['cat'=>'Cappuccino','name'=>'Dee Cappuccino','desc'=>'Equal parts espresso, steamed milk, and silky foam. The Italian classic, perfected in Uganda.','price'=>'8,000','badge'=>'Fan Favourite','img'=>'cafe'],
-      ['cat'=>'Mocha','name'=>'Bean Mocha','desc'=>'Our signature espresso with rich dark chocolate and steamed milk. Indulgence in a cup.','price'=>'9,000','badge'=>null,'img'=>'gallery1'],
-      ['cat'=>'Matcha','name'=>'Matcha Latte','desc'=>'Ceremonial-grade matcha whisked into creamy steamed milk. Calm, earthy perfection.','price'=>'9,500','badge'=>'New','img'=>'gallery2'],
-      ['cat'=>'Pour Over','name'=>'Single Origin Pour Over','desc'=>'Slow-brewed to highlight the unique terroir of our seasonal highland selection. A true experience.','price'=>'10,000','badge'=>null,'img'=>'gallery3'],
+      ['cat'=>'Espresso',    'name'=>'Espresso',          'desc'=>'Concentrated shot of our Ugandan dark roast with silky crema. Pure boldness.', 'price'=>'7,000',  'badge'=>'Best Seller','img'=>'brand'],
+      ['cat'=>'Cappuccino',  'name'=>'Cappuccino',         'desc'=>'Equal parts espresso, steamed milk, and silky foam. S / D available.', 'price'=>'10,000 / 12,000','badge'=>'Fan Favourite','img'=>'cafe'],
+      ['cat'=>'Cafe Mocha',  'name'=>'Cafe Mocha',         'desc'=>'Espresso with rich dark chocolate and steamed milk. Indulgence in a cup.', 'price'=>'12,000', 'badge'=>null,'img'=>'gallery1'],
+      ['cat'=>'Americano',   'name'=>'Americano',          'desc'=>'Bold espresso diluted with hot water — clean, full-bodied, and satisfying.', 'price'=>'10,000', 'badge'=>null,'img'=>'gallery2'],
+      ['cat'=>'Flat White',  'name'=>'Flat White',         'desc'=>'Velvety microfoam poured over a ristretto shot. The barista\'s favourite.', 'price'=>'10,000', 'badge'=>null,'img'=>'about2'],
+      ['cat'=>'African Brew','name'=>'African Brew',       'desc'=>'Our house spiced East African coffee. Warm, aromatic, and deeply soulful.', 'price'=>'12,000', 'badge'=>'House Special','img'=>'gallery3'],
+    ];
+    $tea = [
+      ['cat'=>'Tea',       'name'=>'Chai Latte',       'desc'=>'Aromatic spiced tea blended with steamed milk. Warming and comforting.', 'price'=>'12,000','badge'=>null,'img'=>'gallery7'],
+      ['cat'=>'Tea',       'name'=>'Dawa Tea',          'desc'=>'Traditional East African honey-ginger tea with fresh lemon. A soothing classic.','price'=>'12,000','badge'=>null,'img'=>'gallery8'],
+      ['cat'=>'Chocolate', 'name'=>'Hot Chocolate',     'desc'=>'Rich cocoa with steamed milk and a fine chocolate dusting.', 'price'=>'12,000','badge'=>'Fan Favourite','img'=>'gallery9'],
+      ['cat'=>'Tea',       'name'=>'Black Currant Tea', 'desc'=>'Vibrant black currant infusion — rich in flavour, naturally refreshing.', 'price'=>'12,000','badge'=>null,'img'=>'gallery10'],
+      ['cat'=>'Tea',       'name'=>'Peppermint Tea',    'desc'=>'Fresh peppermint steeped light. Naturally caffeine-free and uplifting.', 'price'=>'12,000','badge'=>null,'img'=>'gallery11'],
+      ['cat'=>'Tea',       'name'=>'African Tea',       'desc'=>'Locally-grown tea brewed strong and served with milk. Pure comfort.', 'price'=>'10,000','badge'=>null,'img'=>'gallery12'],
     ];
     $cold = [
-      ['cat'=>'Cold Brew','name'=>'Signature Cold Brew','desc'=>'Steeped 18 hours in cold water. Smooth, naturally sweet. The ultimate Uganda cold coffee.','price'=>'10,000','badge'=>'Best Seller','img'=>'gallery4'],
-      ['cat'=>'Iced Latte','name'=>'Iced Caramel Latte','desc'=>'Espresso over ice with rich caramel and cold milk. Golden hour in a glass.','price'=>'9,000','badge'=>null,'img'=>'gallery5'],
-      ['cat'=>'Frappé','name'=>'Mocha Frappé','desc'=>'Blended coffee, chocolate, and ice crowned with whipped cream.','price'=>'11,000','badge'=>null,'img'=>'gallery6'],
-      ['cat'=>'Smoothie','name'=>'Coffee Banana Smoothie','desc'=>'Cold brew blended with banana, honey, and oat milk. Breakfast in one beautiful cup.','price'=>'10,500','badge'=>'New','img'=>'gallery7'],
-      ['cat'=>'Specialty','name'=>'Lavender Iced Latte','desc'=>'House-made lavender syrup with espresso and cold milk. Floral, refreshing, unforgettable.','price'=>'10,000','badge'=>null,'img'=>'gallery8'],
-      ['cat'=>'Tonic','name'=>'Espresso Tonic','desc'=>'A shot of espresso over sparkling tonic with fresh citrus. Unexpectedly delightful.','price'=>'9,500','badge'=>null,'img'=>'gallery9'],
+      ['cat'=>'Smoothie',  'name'=>'Tropical Mango Burst',  'desc'=>'Mango, banana, and pineapple blended with coconut milk. Sunshine in a glass.','price'=>'15,000','badge'=>'Best Seller','img'=>'gallery4'],
+      ['cat'=>'Smoothie',  'name'=>'Espresso Chill',         'desc'=>'Cold brew blended with ice cream and espresso. Coffee lovers — this is yours.','price'=>'20,000','badge'=>'Fan Favourite','img'=>'gallery5'],
+      ['cat'=>'Mocktail',  'name'=>'Island Splash',          'desc'=>'Tropical fruits, coconut notes and a citrus twist over crushed ice.','price'=>'14,000','badge'=>null,'img'=>'gallery6'],
+      ['cat'=>'Mojito',    'name'=>'Peachy Breeze Mojito',   'desc'=>'Ripe peach purée, fresh mint, and lime fizz. Sweet, floral, perfectly chilled.','price'=>'20,000','badge'=>null,'img'=>'gallery13'],
+      ['cat'=>'Juice',     'name'=>'Passion Juice',          'desc'=>'Freshly squeezed Ugandan passion fruit — sweet, tangy, impossibly fresh.','price'=>'12,000','badge'=>null,'img'=>'gallery14'],
+      ['cat'=>'Smoothie',  'name'=>'Berry Bliss',            'desc'=>'Strawberries, blueberries, raspberries &amp; Greek yoghurt. Rich and antioxidant-packed.','price'=>'23,000','badge'=>'Premium','img'=>'gallery15'],
     ];
-    $food = [
-      ['cat'=>'Pastry','name'=>'Butter Croissant','desc'=>'Flaky, golden, perfectly laminated. Baked fresh each morning to pair with your morning cup.','price'=>'6,000','badge'=>'Fresh Daily','img'=>'gallery10'],
-      ['cat'=>'Breakfast','name'=>'Belgian Waffle','desc'=>'Crispy exterior, fluffy inside, served with maple syrup and seasonal fruits.','price'=>'15,000','badge'=>null,'img'=>'gallery11'],
-      ['cat'=>'Sandwich','name'=>'Grilled Cheese Panini','desc'=>'Three-cheese blend grilled to melted perfection on artisan sourdough. Comfort food.','price'=>'12,000','badge'=>null,'img'=>'gallery12'],
-      ['cat'=>'Cake','name'=>'Coffee Walnut Cake','desc'=>'Moist coffee-infused sponge with walnut cream frosting — the perfect companion to your espresso.','price'=>'8,000','badge'=>'Best Seller','img'=>'gallery13'],
-      ['cat'=>'Wrap','name'=>'Chicken Avocado Wrap','desc'=>'Grilled chicken, fresh avocado, greens and our house sauce in a warm tortilla.','price'=>'14,000','badge'=>null,'img'=>'gallery14'],
-      ['cat'=>'Sweet','name'=>'Glazed Doughnuts','desc'=>'House-made ring doughnuts with classic glaze or rotating seasonal toppings.','price'=>'5,000','badge'=>null,'img'=>'gallery15'],
+    $signatures = [
+      ['cat'=>'Signature', 'name'=>'Sticky Bun Latte',   'desc'=>'Cinnamon, caramel &amp; vanilla syrup in a silky espresso latte. Dee\'s original creation.','price'=>'13,000','badge'=>'Signature','img'=>'hero2'],
+      ['cat'=>'Signature', 'name'=>'Iced Vanilla Mocha', 'desc'=>'Espresso, dark chocolate, house vanilla syrup &amp; cold milk over ice. Café\'s coolest creation.','price'=>'13,000','badge'=>'Signature','img'=>'gallery16'],
+      ['cat'=>'Cold Brew', 'name'=>'Affogato Delight',   'desc'=>'A shot of hot espresso poured over creamy vanilla ice cream. Dessert &amp; coffee in one.','price'=>'12,000','badge'=>'Fan Favourite','img'=>'gallery17'],
+      ['cat'=>'Blend',     'name'=>'Mocha Rush',          'desc'=>'Chocolate, espresso, and creamy milk blended iced. Rich, bold, deeply satisfying.','price'=>'20,000','badge'=>null,'img'=>'cafe'],
+      ['cat'=>'Shake',     'name'=>'Cookies &amp; Cream Crush','desc'=>'Oreo cookies, vanilla ice cream &amp; milk crushed and blended. Crowned with whipped cream.','price'=>'20,000','badge'=>null,'img'=>'about'],
+      ['cat'=>'Shake',     'name'=>'Biscotti Bliss',      'desc'=>'Espresso, biscotti crumble, and vanilla cream blended to dessert-like perfection.','price'=>'20,000','badge'=>null,'img'=>'gallery6'],
     ];
-    $blends = [
-      ['cat'=>'Uganda Highlands','name'=>'Uganda Highlands Blend','desc'=>'Our flagship blend — dark fruit, cocoa, bright citrus. Proudly grown by our partner farmers in the highlands.','price'=>'12,000','badge'=>'House Blend','img'=>'about'],
-      ['cat'=>'Kisoro','name'=>'Kisoro Arabica','desc'=>'Single-origin from our Kisoro facility. Floral, tea-like, with jasmine notes and wine acidity.','price'=>'14,000','badge'=>null,'img'=>'gallery16'],
-      ['cat'=>'Robusta','name'=>'Bold Ugandan Robusta','desc'=>'Earthy, rich, intense. The authentic taste of Ugandan heritage coffee. Perfect for espresso.','price'=>'11,000','badge'=>null,'img'=>'gallery17'],
-      ['cat'=>'Seasonal','name'=>"Dee's Secret Blend",'desc'=>'Our rotating seasonal blend from partner cooperatives. Ask your barista for today\'s story.','price'=>'15,000','badge'=>'Seasonal','img'=>'hero2'],
-      ['cat'=>'Gorilla Highlands','name'=>'Gorilla Highlands Coffee','desc'=>'From our partner Gorilla Highlands. Award-winning, ethically farmed in Southwestern Uganda.','price'=>'14,000','badge'=>'Partner','img'=>'cafe'],
-      ['cat'=>'Decaf','name'=>'Midnight Decaf','desc'=>'All the rich flavour of our highland blend, with zero caffeine. Perfect for evening.','price'=>'11,000','badge'=>null,'img'=>'gallery5'],
-    ];
-
-    function menuPanel(string $id, array $items): void {
-      echo "<div class=\"menu-panel stagger\" id=\"$id\">";
-      foreach ($items as $i) {
-        $badge = $i['badge'] ? "<span class=\"menu-card-badge\">{$i['badge']}</span>" : '';
-        echo <<<HTML
-        <article class="menu-card">
-          <div class="menu-card-thumb">
-            <img src="<?= img('{$i['img']}') ?>" alt="{$i['name']}" loading="lazy" onerror="this.parentElement.style.background='var(--parchment)';">
-            $badge
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-cat">{$i['cat']}</div>
-            <h3 class="menu-card-name">{$i['name']}</h3>
-            <p class="menu-card-desc">{$i['desc']}</p>
-            <div class="menu-card-footer">
-              <div class="menu-card-price">UGX {$i['price']} <small>/ cup</small></div>
-              <a href="https://wa.me/256774792810?text=Hi!%20I'd%20like%20to%20order%20a%20{$i['name']}" target="_blank" class="menu-card-order-btn">
-                Order <i class="fa-solid fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-        </article>
-        HTML;
-      }
-      echo "</div>";
-    }
-    ?>
-
-    <?php
-    // Output panels — PHP img() calls need to be resolved at runtime
     $panels = [
-      'panel-hot'    => $hot,
-      'panel-cold'   => $cold,
-      'panel-food'   => $food,
-      'panel-blends' => $blends,
+      'panel-hot'        => $hot,
+      'panel-tea'        => $tea,
+      'panel-cold'       => $cold,
+      'panel-signatures' => $signatures,
     ];
     foreach ($panels as $pid => $items):
     ?>
@@ -349,9 +318,9 @@ include 'includes/header.php';
         <div class="menu-card-body">
           <div class="menu-card-cat"><?= htmlspecialchars($item['cat']) ?></div>
           <h3 class="menu-card-name"><?= htmlspecialchars($item['name']) ?></h3>
-          <p class="menu-card-desc"><?= htmlspecialchars($item['desc']) ?></p>
+          <p class="menu-card-desc"><?= $item['desc'] ?></p>
           <div class="menu-card-footer">
-            <div class="menu-card-price">UGX <?= $item['price'] ?> <small>/ cup</small></div>
+            <div class="menu-card-price">UGX <?= $item['price'] ?></div>
             <a href="<?= wa_link("Hi! I'd like to order: {$item['name']}") ?>" target="_blank" class="menu-card-order-btn">
               Order <i class="fa-solid fa-arrow-right"></i>
             </a>
